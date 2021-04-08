@@ -1,0 +1,42 @@
+body{
+	margin: 0;
+}
+
+.container{
+	max-width: 600px;
+	padding: 1em;
+	padding-bottom: 0;
+	/* border: 1px solid magenta; */
+	/* width: 500px; */
+}
+.row{
+	display: flex;
+	flex-direction: column;
+	/* border: 1px solid green; */
+
+}
+img{
+	width: 100%;
+	margin-bottom: 1em;
+	object-fit: cover;
+	height: 250px;
+
+}
+
+@media (min-width:600px){
+	.container{
+		max-width: 1200px;
+		padding: 0;
+		padding-top: 1em;
+	}
+	.row{
+		flex-direction: row;
+		width: 100%;
+		/* border: 1px solid green; */
+		justify-content: space-evenly;
+
+	}
+	img{
+		width: 48%;
+	}
+}
