@@ -34,11 +34,14 @@ body{
 	text-align: center;
 	margin: 0;
 	padding: 1.5em;
+	font-weight: 400;
 }
 .links{
+	text-transform: uppercase;
 	display:  flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	align-items: center;
+	/* justify-content: space-evenly; */
 }
 .link{
 	margin-bottom: 10px;
@@ -60,9 +63,20 @@ body{
 	.nav{
 		display: flex;
 		align-items: center;
+		justify-content: space-around;
 	}
 	.links{
+		width: 60%;
 		flex-direction: row;
+		justify-content: center;
+		/* border: 1px solid magenta; */
+	}
+	.title{
+		width: 30%;
+	}
+	.link{
+		margin: 0;
+		margin: 2px 10px;
 	}
 }
  
