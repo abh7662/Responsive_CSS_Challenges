@@ -1,0 +1,81 @@
+/* **Challenge**:
+Your main goal is to fix the given navigation bar so that the menu items appear centered. They also have to be placed in a column on small devices, while they will be placed in a row next to the main logo on larger ones.
+
+**Hints:**
+ - Use Flexbox
+ - Use Media Queries
+ - Remember responsive units
+
+**Topics Covered:**
+ - Flexbox
+ - Media Queries
+ - Responsive Units */
+
+ /* DON'T TOUCH THIS! */
+body {
+	margin: 0;
+}
+
+.nav {
+	min-height: 150px;
+	background: #f0ffff;
+	margin: 0;
+	text-align: center;
+}
+
+.title {
+	font-family: 'Ubuntu', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 20px;
+	color: #e37a42;
+	font-size: 3.5rem;
+	margin: 1em;
+}
+
+.links {
+	width: 60%;
+	margin: 1em;
+}
+
+.link {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #82350c;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 800;
+	font-size: 1.25rem;
+	margin: 0.75em;
+
+}
+
+.link-selected {
+	text-decoration: underline;
+}
+
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+   ========================== */
+.title{
+	margin: 0;
+	padding: 1em;
+}
+   .links{
+	   border: 1px solid magenta;
+	   margin: 0;
+	   display: flex;
+	   flex-direction: column;
+	   justify-content: center;
+	   width: 100%;
+   }
+
+@media (min-width: 600px){
+	.nav{
+		display: flex;
+	}
+	.links{
+		flex-direction: row;
+		align-items: center;
+	}
+}
