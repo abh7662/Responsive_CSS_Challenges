@@ -1,132 +1,185 @@
-body{
-	font-family: 'Source Sans Pro', sans-serif;
-	margin: 0;
+/*  font-family: 'Source Sans Pro', sans-serif;  */
+
+* {
+    box-sizing: border-box;
 }
 
-.container{
-	/* border: 5px solid green; */
-	display: flex;
-	flex-direction: column;
-	/* justify-content: center;
-	align-items: center; */
-}
-.bbq-head{
-	/* max-width: 550px; */
-	background-image: url(images/dark-ribs.jpg);
-	background-size: cover;	
-	/* border: 5px solid yellow; */
-
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 1rem;
+    color: #404040;
+    text-align: center;
 }
 
-.header-head{
 
-	color: #F18119;
-	border-top: 6px solid #F18119;
-	margin: 0;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size:.7rem;
-	line-height: 4;
-	width: 18em;
-	margin: 0 auto;
-}
+/* =================
+   Typography 
+   ================= */
 
-.title{
-	color: #fff;
-	font-weight: 100;
-	text-align: center;
-	margin: 2em 0;
-}
-span{
-	font-weight: 700;
-
-}
-.sec-title{
-	text-align: center;
-	text-transform: uppercase;
-	color: #F18119;
-
-}
-.bbq-main{
-	padding: 2em;
+h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
 }
 
-input{
-	display: block;
-	margin: 0 auto;
-	margin-bottom: 1em;
-	height: 2.5em;
-	width: 16em;
-	border-radius: 5px;
-	border: 2px solid #948b7af6;
-
+h1 + p {
+    color: #F18119;
+    font-weight: 900;
+    font-size: 1.3125rem;
+    text-transform: uppercase;
+    margin: 0;
 }
 
-.btn{
-	margin: 0 auto;
-	display: block;
-	height: 2.7em;
-	width: 16.5em;
-	border-radius: 5px;
-	background-image: linear-gradient(90deg, white,  #F18119);
-	border: 5px solid linear-gradient(90deg, white,  #F18119);;
-	color: white;
-	text-transform: uppercase;
+h2 {
+    font-size: 1.3125rem;
+    margin: 0;
 }
-.sec-para1, .sec-para2, .com-title{
-	text-align: center;
-}
-.sec-para2{
-	font-size: .8rem;
-	width: 200px;
-	padding: 1em;
-	margin: 0 auto;
-	color: #948b7af6;
-}
-.sec-para1{
-	color: #948b7af6;
-	line-height: 1.2;
-}
-.com-title{
-	color: #F18119;
-	text-transform: uppercase;
-	margin: 0;
-	letter-spacing: 1;
-}
-.bbq-main .sec-title{
-	margin: 0;
-	color: black;
-}
-@media (min-width: 700px){
-	.container{
-		flex-direction: row;
-	}
-	.bbq-head{
-		min-height: 100vh;
-		width: 60%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
 
-	.title{
-		margin: 0;
-	}
-	.sec-title{
-	
-	}
-	/* .header-head{
-		align-self: flex-start;
-		align-content: unset;
-		vertical-align: initial;
-	} */
-	.bbq-main{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 40%;	
-		padding: 2em;
-	}
+h2 + p {
+    font-weight: 900;
+    color: #F18119;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.top-text {
+    font-size: 0.625rem;
+    margin: 0;
+    padding-top: 2px;
+    color: #F18119;
+    font-weight: 900;
+    text-transform: uppercase;
+    order: -1;
+    border-top: 5px solid #F18119;
+    border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+}
+
+.fine-print {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+strong { font-weight: 900; }
+
+
+/* =================
+   Intro section 
+   ================= */
+   
+.intro {
+    background-image: url(images/ribs.jpg), linear-gradient(45deg,red, blue);
+    /* background-color: #ff0000; */
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    padding: 0 .5em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+
+
+/* =================
+   main-content section 
+   ================= */
+   
+.main-content {
+    padding: 2em 1em;
+}
+
+
+
+.intro > *,
+.main-content > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =================
+   form
+   ================= */
+   
+.email-collector {
+    width: 80%;
+    max-width: 300px;
+}
+
+input,
+.btn {
+    width: 100%;
+    border-radius: 5px;
+}
+
+input {
+    font-family: inherit;
+    text-align: inherit;
+    margin-bottom: .75em;
+    padding: .25em;
+    border: 1px solid #404040;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+input:focus {
+    transform: scale(1.1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-image: linear-gradient(to left, #FF713B, #FFA51D);
+    color: white;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: scale(1.1);
+}
+
+/* =================
+   media queries 
+   ================= */
+   
+@media (min-width: 500px) {
+    body {
+        font-size: 1.125rem;
+        display: flex;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    h2,
+    h1 + p {
+        font-size: 1.75rem;
+    }
+    
+    .intro,
+    .main-content {
+        width: 50%;
+        min-height: 100vh;
+    }
+    
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
