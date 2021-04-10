@@ -1,0 +1,132 @@
+body{
+	font-family: sans-serif;
+	margin: 0;
+}
+
+.container{
+	/* border: 5px solid green; */
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center;
+	align-items: center; */
+}
+.bbq-head{
+	/* max-width: 550px; */
+	background-image: url(images/dark-ribs.jpg);
+	background-size: cover;	
+	/* border: 5px solid yellow; */
+
+}
+
+.header-head{
+
+	color: #F18119;
+	border-top: 6px solid #F18119;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size:.7rem;
+	line-height: 4;
+	width: 18em;
+	margin: 0 auto;
+}
+
+.title{
+	color: #fff;
+	font-weight: 100;
+	text-align: center;
+	margin: 2em 0;
+}
+span{
+	font-weight: 700;
+
+}
+.sec-title{
+	text-align: center;
+	text-transform: uppercase;
+	color: #F18119;
+
+}
+.bbq-main{
+	padding: 2em;
+}
+
+input{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 1em;
+	height: 2.5em;
+	width: 16em;
+	border-radius: 5px;
+	border: 2px solid #948b7af6;
+
+}
+
+.btn{
+	margin: 0 auto;
+	display: block;
+	height: 2.7em;
+	width: 16.5em;
+	border-radius: 5px;
+	background-color: #F18119;
+	border: 5px solid #F18119;
+	color: white;
+	text-transform: uppercase;
+}
+.sec-para1, .sec-para2, .com-title{
+	text-align: center;
+}
+.sec-para2{
+	font-size: .8rem;
+	width: 200px;
+	padding: 1em;
+	margin: 0 auto;
+	color: #948b7af6;
+}
+.sec-para1{
+	color: #948b7af6;
+	line-height: 1.2;
+}
+.com-title{
+	color: #F18119;
+	text-transform: uppercase;
+	margin: 0;
+	letter-spacing: 1;
+}
+.bbq-main .sec-title{
+	margin: 0;
+	color: black;
+}
+@media (min-width: 700px){
+	.container{
+		flex-direction: row;
+	}
+	.bbq-head{
+		height: 100vh;
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.title{
+		margin: 0;
+	}
+	.sec-title{
+	
+	}
+	/* .header-head{
+		align-self: flex-start;
+		align-content: unset;
+		vertical-align: initial;
+	} */
+	.bbq-main{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 40%;	
+		padding: 2em;
+	}
+}
