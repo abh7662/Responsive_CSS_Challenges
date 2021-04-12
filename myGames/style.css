@@ -1,0 +1,21 @@
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col{
+    border: 1px solid magenta;
+    width: 10rem;
+    height: 10rem;
+    background-color: #efefef;
+    font-size: 2rem;
+    text-align: center;
+    padding: auto;
+    transition: 1000ms;
+    color: mediumspringgreen;
+}
+.col:hover{
+    transform: scale(1.1);
+    
+}
+
