@@ -1,0 +1,18 @@
+body{
+    margin: 10px;
+    padding: 10px;
+}
+
+.grid{
+    height: 420px;
+    width: 420px;
+    border: solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div{
+    height: 15px;
+    width: 15px;
+    background: blue;
+}
