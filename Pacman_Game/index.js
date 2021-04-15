@@ -171,10 +171,10 @@ ghosts.forEach(ghost => {
 
 ghosts.forEach(ghost => moveGhost(ghost))
 function moveGhost(ghost){
-    console.log("mov ghost")
+    // console.log("mov ghost")
     const directions = [-1, +1, +width, -width]
     let direction = directions[Math.floor(Math.random()*directions.length)]
-    console.log(direction)
+    // console.log(direction)
 
     ghost.timerId = setInterval(() => {
         if(!newGridArray[ghost.currentIndex+direction].classList.contains("ghost") && !newGridArray[ghost.currentIndex+direction].classList.contains("wall")){
