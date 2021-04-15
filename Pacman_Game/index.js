@@ -70,6 +70,8 @@ newGridArray[pacmanCurrentIndex].classList.add("pacman")
 function control(e){
     pacDotEaten()
     powerPalletEaten()
+    CheckgameOver()
+    checkForWin()
     switch(e.keyCode){
         
         case 37:
@@ -138,7 +140,7 @@ function powerPalletEaten(){
         })
         setTimeout(() => {
             ghosts.forEach(ghost => ghost.isScared = false)
-            }, 10000)
+            }, 100000)
 
     }
 }
@@ -177,7 +179,7 @@ function moveGhost(ghost){
     ghost.timerId = setInterval(() => {
         if(!newGridArray[ghost.currentIndex+direction].classList.contains("ghost") && !newGridArray[ghost.currentIndex+direction].classList.contains("wall")){
             newGridArray[ghost.currentIndex].classList.remove(ghost.className)
-            newGridArray[ghost.currentIndex].classList.remove("ghost")
+            newGridArray[ghost.currentIndex].classList.remove("ghost", "scared-ghost")
             
             ghost.currentIndex += direction
             newGridArray[ghost.currentIndex].classList.add(ghost.className)
@@ -186,12 +188,46 @@ function moveGhost(ghost){
         }else{
             direction = directions[Math.floor(Math.random()*directions.length)]
         }
+        if(ghost.isScared){
+            newGridArray[ghost.currentIndex].classList.add("scared-ghost")
+        }
+
+        if(ghost.isScared && newGridArray[ghost.currentIndex].classList.contains("pacman")){
+            // console.log("hell")
+            newGridArray[ghost.currentIndex].classList.remove(ghost.className, "ghost", "scared-ghost")
+            ghost.currentIndex = ghost.startIndex
+            currentScore += 100
+            score.textContent = currentScore
+            newGridArray[ghost.currentIndex].classList.add(ghost.className, "ghost")
+
+        }
+        CheckgameOver()
+        checkForWin()
     },ghost.speed)
 }
 
+//check for game over
 
+function CheckgameOver(){
+    if(newGridArray[pacmanCurrentIndex].classList.contains("ghost") && !newGridArray[pacmanCurrentIndex].classList.contains("scared-ghost")){
+        // console.log("abhi")
+        ghosts.forEach(ghost => clearInterval(ghost.timerId))
+        document.removeEventListener("keydown",control)
+        score.textContent = "Game Over"
+    }
+}
 
+//check for win
 
+function checkForWin(){
+    if(currentScore === 274){
+        ghosts.forEach(ghost => clearInterval(ghost.timerId))
+        document.removeEventListener("keydown",control)
+        score.textContent = "Congrats!!! you won the game :)"
+
+    }
+
+}
 // function controlup(e){
 //     newGridArray[pacmanCurrentIndex].classList.remove("pacman")
 //             if(pacmanCurrentIndex - width > 0){
