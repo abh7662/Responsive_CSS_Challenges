@@ -10,12 +10,21 @@ html, body {
 h1{
     font-size: 60px;
     font-weight: 300;
-
+}
+.bold-text{
+    font-weight: 900;
+    display: block;
+}
+h1 .bold-text{
+    font-size: 80px;
 }
 h2{
     font-size: 42px;
     font-weight: 300;
     
+}
+h2 .bold-text{
+    font-size: 60px;
 }
 h3{
     font-size: 36px;
@@ -32,4 +41,12 @@ h3{
     text-align: center;
     width: 570px;
     margin: 0 auto;
+}
+
+a{
+    color: #99d930;
+    font-weight: 900;
+}
+a:hover, a:focus{
+    color: #131313;
 }
