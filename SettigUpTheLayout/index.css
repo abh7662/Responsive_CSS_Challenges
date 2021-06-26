@@ -50,3 +50,17 @@ a{
 a:hover, a:focus{
     color: #131313;
 }
+.row{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* border: 1px solid magenta; */
+    background-color: #ffeaea;
+}
+.row:last-child{
+    padding-bottom: 100px;
+    background-color: #eaf9ff;
+}
+.row:first-child{
+    background-color: #d7d7d7;
+
+}
