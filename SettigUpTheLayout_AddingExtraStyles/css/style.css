@@ -1,14 +1,33 @@
+html{
+    font-size: .9rem;
+
+}
+
 body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.3125rem;
     font-weight: 300;
     margin: 0;
 }
+@media(min-width: 600px){
+    html{
+        font-size: 1.3125rem;
+    }
 
+}
+@media(min-width: 750px){
+    main{
+        display: flex;
+    }
+}
+img{
+    max-width: 100%;
+}
 .container {
     max-width: 36rem;
     margin: 0 auto;
+    padding: 0 10px;
+
 }
 
 h1,
