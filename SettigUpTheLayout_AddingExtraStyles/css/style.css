@@ -9,17 +9,7 @@ body {
     font-weight: 300;
     margin: 0;
 }
-@media(min-width: 600px){
-    html{
-        font-size: 1.3125rem;
-    }
 
-}
-@media(min-width: 750px){
-    main{
-        display: flex;
-    }
-}
 img{
     max-width: 100%;
 }
@@ -61,7 +51,7 @@ h3 {
 }
 
 h1 .accent-text {
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 h2 .accent-text {
@@ -94,9 +84,14 @@ a:focus {
     margin-top: 5px;
 } 
 
-header,
+/* header, */
 section {
     padding: 6em 0;
+}
+header{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .inverse {
@@ -123,4 +118,35 @@ section {
 .btn:focus {
     background: #252525;
     color: #fff;
+}
+
+@media(min-width: 600px){
+    html{
+        font-size: 1.3125rem;
+    }
+
+}
+@media(min-width: 750px){
+    main{
+        display: flex;
+    }
+    .articles{
+        background-color: #99D930;
+        color: #252525;
+
+    }
+    .articles .accent-text,.articles .name, .articles time, .articles a{
+        color: currentColor;
+
+    }
+    .articles .btn{
+        background-color: #252525;
+        color: #fff;
+    }
+    .articles h2{
+        border-color: #131313;
+    }
+    .articles a:hover, .articles a:focus{
+        color: white;
+    }
 }
